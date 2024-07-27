@@ -13,7 +13,10 @@ const Footer = () => {
           <h1 className="text-center md:text-start">LET'S CONNECT</h1>
           <p className="text-lg font-Manrope py-8">
             Say hello at{" "}
-            <Link to={""} className="underline text-phosphorusGreen">
+            <Link
+              to={"mailto:hseyedi909@gmail.com"}
+              className="underline text-phosphorusGreen"
+            >
               hseyedi909@gmail.com
             </Link>
             <br />
@@ -24,12 +27,19 @@ const Footer = () => {
           </p>
           <div className="flex w-full">
             <div className="text-phosphorusGreen flex w-full gap-4 px-8">
-              <Button className="size-14 rounded-full bg-lightDark items-center flex justify-center">
+              <Link
+                to={"https://github.com/informatiker99"}
+                target="_blank"
+                className="size-14 rounded-full bg-lightDark items-center flex justify-center"
+              >
                 <Github />
-              </Button>
-              <Button className="size-14 rounded-full bg-lightDark items-center flex justify-center">
+              </Link>
+              <Link
+                to={""}
+                className="size-14 rounded-full bg-lightDark items-center flex justify-center"
+              >
                 <Linkedin />
-              </Button>
+              </Link>
               <Button className="size-14 rounded-full bg-lightDark items-center flex justify-center">
                 <Instagram />
               </Button>

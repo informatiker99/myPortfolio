@@ -45,10 +45,10 @@ const App = () => {
             <div className="px-2 ">
               <Button
                 type="button"
-                className="py-3 px-4  min-h-14 w-[160px] md:w-[187px]  font-bold flex items-center justify-between  bg-phosphorusGreen rounded-full "
+                className="py-3 px-4 group   min-h-14 w-[160px] md:w-[187px]  font-bold flex items-center justify-between  bg-phosphorusGreen rounded-full "
               >
                 CONTACT ME
-                <span className="size-2 flex items-center justify-center hover:size-8 transition-all duration-200 ease-out text-white rounded-full bg-black">
+                <span className="size-2 flex items-center justify-center  group-hover:size-8 transition-all duration-200 ease-out text-white rounded-full bg-black">
                   <MoveUpRight />
                 </span>
               </Button>
@@ -177,7 +177,7 @@ const App = () => {
         <div className="flex justify-center gap-4 flex-wrap pt-10">
           {images.map((item) => {
             return (
-              <div className="flex w-72 border border-gray-50 p-3 justify-between items-center rounded-xl hover:opacity-100 relative">
+              <div className="flex w-72 border-[1px] border-gray-50 p-3 justify-between items-center rounded-md hover:opacity-100 relative">
                 <img src={item.src} alt="alt" className="size-20 " />
                 <div className="text-white font-Manrope text-base capitalize pt-2">
                   {item.lable}
