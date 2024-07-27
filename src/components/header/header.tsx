@@ -28,13 +28,32 @@ const Header = () => {
         Hossein seyedi
       </div>
       <ul className="flex font-Manrope">
-        {links.map((item) => {
-          return (
-            <li className="hidden sm:flex items-center  px-4 hover:text-normalTextHover transition-all duration-200">
-              <Link to={item.to}>{item.lable}</Link>
-            </li>
-          );
-        })}
+        {/* {links.map((item) => { */}
+        {/* return ( */}
+        <li className=" px-4 py-3 hover:text-normalTextHover transition-all duration-200">
+          <Link to={""}>Work</Link>
+        </li>
+        <li className=" px-4 py-3 hover:text-normalTextHover transition-all duration-200">
+          <Link to={""}>About</Link>
+        </li>
+        <li className=" px-4 py-3 hover:text-normalTextHover transition-all duration-200">
+          <Link to={""}>
+            <span
+              onClick={() => {
+                console.log("y");
+
+                window.scrollTo({
+                  behavior: "smooth",
+                  top: document.body.scrollHeight,
+                });
+              }}
+            >
+              Contact
+            </span>
+          </Link>
+        </li>
+        {/* ); */}
+        {/* })} */}
         <div>
           <AlignJustify
             className="sm:hidden cursor-pointer "
@@ -63,13 +82,32 @@ const Header = () => {
             </span>
           </div>
           <ul className="text-white">
-            {links.map((item) => {
-              return (
-                <li className=" px-4 py-3 hover:text-normalTextHover transition-all duration-200">
-                  <Link to={item.to}>{item.lable}</Link>
-                </li>
-              );
-            })}
+            {/* {links.map((item) => { */}
+            {/* return ( */}
+            <li className=" px-4 py-3 hover:text-normalTextHover transition-all duration-200">
+              <Link to={""}>Work</Link>
+            </li>
+            <li className=" px-4 py-3 hover:text-normalTextHover transition-all duration-200">
+              <Link to={""}>About</Link>
+            </li>
+            <li className=" px-4 py-3 hover:text-normalTextHover transition-all duration-200">
+              <Link to={""}>
+                <span
+                  onClick={() => {
+                    console.log("y");
+
+                    window.scrollTo({
+                      behavior: "smooth",
+                      top: document.body.scrollHeight,
+                    });
+                  }}
+                >
+                  Contact
+                </span>
+              </Link>
+            </li>
+            {/* ); */}
+            {/* })} */}
           </ul>
         </div>
         <div>social network </div>
