@@ -3,6 +3,7 @@ import Button from "../button/button";
 import { Linkedin } from "lucide-react";
 import { Github } from "lucide-react";
 import { Instagram } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -20,10 +21,15 @@ const Footer = () => {
             </Link>
             <br />
             for more info here is my{" "}
-            <Link to={""} className="underline">
+            <a
+              href={"/resume/Hossein-Seyedi.pdf"}
+              className="underline"
+              download
+            >
               resume
-            </Link>
+            </a>
           </p>
+
           <div className="flex w-full">
             <div className="text-phosphorusGreen flex w-full gap-4 px-8">
               <Link
@@ -42,6 +48,17 @@ const Footer = () => {
               <Button className="size-14 rounded-full bg-lightDark items-center flex justify-center">
                 <Instagram />
               </Button>
+              <div className="relative flex  grow ">
+                <Link
+                  to={"tel:09384935387"}
+                  className="underline text-phosphorusGreen size-14 rounded-full bg-lightDark items-center flex justify-center group"
+                >
+                  <Phone />
+                  <div className=" absolute -translate-y-1/2 left-14  top-1/2 grow text-center group-hover:opacity-100 transition-opacity duration-500 ease-out opacity-0 bg-lightDark rounded-full font-Manrope text-sm p-4 tracking-[.2rem]	">
+                    <p>+98 938 493 53 87</p>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

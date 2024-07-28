@@ -72,8 +72,8 @@ const App = () => {
           <h1 className="text-[43px] md:text-[77px] ">My Capabilities</h1>
         </div>
         <div className="grid md:grid-cols-4 grid-cols-1 sm:grid-cols-2 font-Manrope font-bold   justify-center gap-2 w-full pt-10">
-          <div className="basis-1/3 capitalize bg-gradient-to-r from-amber-500 to-pink-500   tracking-wider	 rounded-lg p-3 flex-col items-center  ">
-            <div className="py-2  px-2">Languages</div>
+          <div className="basis-1/3 capitalize bg-gradient-to-r from-amber-500 to-pink-500   tracking-wider	 rounded-lg p-5 flex-col items-center  ">
+            <div className="py-2  px-2 tracking-[.2rem] ">Languages</div>
             <ul className="pl-6 pt-2">
               <li>javascript /+es6</li>
               <li>sass</li>
@@ -87,8 +87,8 @@ const App = () => {
               <li>html 5</li>
             </ul>
           </div>
-          <div className="basis-1/3 bg-gradient-to-r from-teal-200 capitalize to-teal-500 rounded-lg p-3 flex tracking-wider flex-col items-center">
-            <div className="py-2  px-2 text-start w-full">
+          <div className="basis-1/3 bg-gradient-to-r from-teal-200 capitalize to-teal-500 rounded-lg p-5 flex tracking-wider flex-col items-center">
+            <div className="py-2  px-2 text-start w-full tracking-[.2rem]">
               Frameworks & libraries
             </div>
             <ul className="w-full pl-6 pt-2 ">
@@ -99,8 +99,8 @@ const App = () => {
               <li>redux</li>
             </ul>
           </div>
-          <div className="basis-1/3 tracking-wider flex-col items-center bg-gradient-to-r from-amber-200 to-yellow-500 rounded-lg p-3 flex capitalize ">
-            <div className="w-full text-start">Skills</div>
+          <div className="basis-1/3 tracking-wider flex-col items-center bg-gradient-to-r from-amber-200 to-yellow-500 rounded-lg p-5 flex capitalize ">
+            <div className="w-full text-start tracking-[.2rem]">Skills</div>
             <ul className="w-full py-2 pl-6">
               <li>git and gitub/gitlab</li>
               <li>rest api</li>
@@ -112,8 +112,8 @@ const App = () => {
               <li> fimga</li>
             </ul>
           </div>
-          <div className="basis-1/3 bg-gradient-to-r capitalize from-violet-200 to-pink-200 rounded-lg p-3 flex tracking-wider flex-col  ">
-            <div className="w-full text-start ">Exploring</div>
+          <div className="basis-1/3 bg-gradient-to-r capitalize from-violet-200 to-pink-200 rounded-lg p-5 flex tracking-wider flex-col  ">
+            <div className="w-full text-start tracking-[.2rem]">Exploring</div>
             <ul className="w-full pl-6 pt-2 ">
               <li>ci/cd</li>
               <li>ssr</li>
