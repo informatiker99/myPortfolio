@@ -5,26 +5,10 @@ import { Linkedin } from "lucide-react";
 import { Github } from "lucide-react";
 import { MoveUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import ContactMe from "./components/contactMe/contactMe";
+import FeaturedProjects from "./components/featuredProjects/featuredProjects";
 
 const App = () => {
-  const images = [
-    { src: "./public/Git-Icon-1788C 1.png", lable: "git" },
-    { src: "./public/css.svg", lable: "css" },
-    { src: "./public/sass.svg", lable: "sass" },
-    { src: "./public/ts.png", lable: "type script" },
-    { src: "./public/next.js.png", lable: "next.js" },
-    { src: "./public/React_.svg", lable: "react.js" },
-    { src: "./public/logo-javascript.svg", lable: "java script" },
-    { src: "./public/bootstrap-.png", lable: "bootstrap" },
-    { src: "./public/redux-logo.svg", lable: "redux" },
-    { src: "./public/tailwind.svg", lable: "tailwind" },
-    { src: "./public/HTML5_Badge.svg.png", lable: "html" },
-  ];
-  const refOne = useRef<HTMLElement>(null);
-  const refTwo = useRef<HTMLElement>(null);
-  const refThree = useRef<HTMLElement>(null);
-  const refFour = useRef<HTMLElement>(null);
-
   return (
     <Layout>
       <section className="flex  flex-col gap-y-10  md:justify-center  md:flex-row w-full bg-generalBg  px-2 md:p-10">
@@ -41,7 +25,7 @@ const App = () => {
               <br /> accessible and use friendly websites
             </p>
           </div>
-          <div className="flex w-full pt-6 justify-center md:justify-start items-center">
+          <div className="flex  w-full pt-6 justify-center md:justify-start items-center">
             <div className="px-2 ">
               <Button
                 type="button"
@@ -83,136 +67,64 @@ const App = () => {
         {/* <Scroller steps={4}></Scroller> */}
       </section>
 
-      <section
-        id="one"
-        ref={refOne}
-        className="bg-generalBg w-full flex flex-col items-center p-4 md:p-10 gap-y-12"
-      >
-        <div className="w-full text-white pb-14">
-          <h1 className="font-bebasRegular text-[43px] md:text-[76px]">
-            FEATURED PROJECTS{" "}
-          </h1>
-          <p className="font-Manrope text-normalText md:text-lg text-[16px]">
-            Here are some of the selected projects that snowcase my passion for{" "}
-            <br /> front-end development.{" "}
-          </p>
-        </div>
-        <article className=" md:flex justify-center items-center w-full p-2 ">
-          <div className="bg-articleBG basis-1/2 p-4 w-full rounded-lg flex justify-center items-center">
-            <img src="./public/project1png.png" alt="pic" className="w-3/4" />
-          </div>
-          <div className="w-full flex flex-col items-center text-white p-4">
-            <div className="font-Manrope  text-[24px] md:text-[32px] pb-4">
-              Promotional landing page for book ordering
-            </div>
-            <div>
-              <p className="text-lg font-Manrope text-left">
-                Teamed up with a designer to breathe life into a promotional
-                webpage for book publishers . Delivered a fully responsive
-                design with dynamic content capabilities, seamlessly integrating
-                a newsletter feature to keep book lovers with the latest
-                adventures.
-              </p>
-            </div>
-            <div className="flex items-start w-full flex-col text-base font-Manrope divide-y divide-white text-white ">
-              <div className=" p-4">
-                <p>PROJECT INFO</p>
-              </div>
-              <div className="w-full p-4 flex justify-between">
-                <div>Year</div>
-                <div>2023</div>
-              </div>
-              <div className="w-full p-4 flex justify-between">
-                <div>Role</div>
-                <div>Front-end Developer</div>
-              </div>
-            </div>
-          </div>
-        </article>
-        {/* this section musst change  */}
-        <article
-          className=" md:flex justify-center items-center w-full p-2 "
-          ref={refTwo}
-        >
-          <div className="bg-articleBG basis-1/2 p-4 w-full rounded-lg flex justify-center items-center">
-            <img src="./public/project1png.png" alt="pic" className="w-3/4 " />
-          </div>
-          <div className="w-full flex flex-col items-center text-white p-4">
-            <div className="font-Manrope  text-[24px] md:text-[32px] pb-4">
-              Promotional landing page for book ordering
-            </div>
-            <div>
-              <p className="text-lg font-Manrope text-left">
-                Teamed up with a designer to breathe life into a promotional
-                webpage for book publishers . Delivered a fully responsive
-                design with dynamic content capabilities, seamlessly integrating
-                a newsletter feature to keep book lovers with the latest
-                adventures.
-              </p>
-            </div>
-            <div className="flex items-start w-full flex-col text-base font-Manrope divide-y divide-white text-white ">
-              <div className=" p-4">
-                <p>PROJECT INFO</p>
-              </div>
-              <div className="w-full p-4 flex justify-between">
-                <div>Year</div>
-                <div>2023</div>
-              </div>
-              <div className="w-full p-4 flex justify-between">
-                <div>Role</div>
-                <div>Front-end Developer</div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
+      <FeaturedProjects></FeaturedProjects>
 
-      <section
-        className="w-full flex-col md:flex items-center justify-center bg-generalBg  p-2 md:p-10 pt-8"
-        ref={refThree}
-      >
+      <section className="w-full flex-col md:flex items-center justify-center bg-generalBg  px-6 md:p-10 pt-8">
         <div className="flex justify-center md:justify-start md:text-center font-bebasRegular text-white ">
           <h1 className="text-[43px] md:text-[77px] ">My Capabilities</h1>
         </div>
-        <div className="flex justify-center gap-4 flex-wrap pt-10">
-          {images.map((item) => {
-            return (
-              <div className="flex w-72 border-[1px] border-gray-50 p-3 justify-between items-center rounded-md hover:opacity-100 relative">
-                <img src={item.src} alt="alt" className="size-20 " />
-                <div className="text-white font-Manrope text-base capitalize pt-2">
-                  {item.lable}
-                </div>
-              </div>
-            );
-          })}
+        <div className="grid md:grid-cols-4 grid-cols-1 sm:grid-cols-2 font-Manrope font-bold   justify-center gap-2 w-full pt-10">
+          <div className="basis-1/3 capitalize bg-gradient-to-r from-amber-500 to-pink-500   tracking-wider	 rounded-lg p-3 flex-col items-center  ">
+            <div className="py-2  px-2">Languages</div>
+            <ul className="pl-6 pt-2">
+              <li>javascript /+es6</li>
+              <li>sass</li>
+              <li>typescript</li>
+            </ul>
+            <div className="bg-blue-300 p-1 rounded-md m-4 ">
+              markup Languages
+            </div>
+            <ul className="pl-6 w-full">
+              <li>css 3</li>
+              <li>html 5</li>
+            </ul>
+          </div>
+          <div className="basis-1/3 bg-gradient-to-r from-teal-200 capitalize to-teal-500 rounded-lg p-3 flex tracking-wider flex-col items-center">
+            <div className="py-2  px-2 text-start w-full">
+              Frameworks & libraries
+            </div>
+            <ul className="w-full pl-6 pt-2 ">
+              <li>react js</li>
+              <li>next js</li>
+              <li>tailwind</li>
+              <li>bootstrap</li>
+              <li>redux</li>
+            </ul>
+          </div>
+          <div className="basis-1/3 tracking-wider flex-col items-center bg-gradient-to-r from-amber-200 to-yellow-500 rounded-lg p-3 flex capitalize ">
+            <div className="w-full text-start">Skills</div>
+            <ul className="w-full py-2 pl-6">
+              <li>git and gitub/gitlab</li>
+              <li>rest api</li>
+              <li> team work </li>
+              <li> Responsive design</li>
+              <li> Self-learning</li>
+              <li> Problem-solving</li>
+              <li> package manager</li>
+            </ul>
+          </div>
+          <div className="basis-1/3 bg-gradient-to-r capitalize from-violet-200 to-pink-200 rounded-lg p-3 flex tracking-wider flex-col  ">
+            <div className="w-full text-start ">Exploring</div>
+            <ul className="w-full pl-6 pt-2 ">
+              <li>ci/cd</li>
+              <li>ssr</li>
+              <li>docker</li>
+              <li>react query</li>
+            </ul>
+          </div>
         </div>
       </section>
-      <section
-        className="w-full flex items-center justify-center bg-generalBg  p-2 md:p-10 pt-8"
-        ref={refFour}
-      >
-        <div className="flex-col md:flex-row items-center justify-center md:flex text-white ">
-          <div className="text-white flex justify-start text-start w-full basis-1/2 font-bebasRegular md:text-[101px] text-[43px]">
-            <h1 className="px-8">ABOUT ME</h1>
-          </div>
-          <div className="p-8 basis-1/2">
-            <p className="font-Manrope text-3xl text-start ">
-              I am a passionated front-end developer based in Mashhad.
-            </p>
-            <p className="text-lg text-start pt-8">
-              I am a front-end developer based in Mashhad looking for exciting
-              opportunities. Likes to focus on accessibility when developing.
-              Passionate and curious about solving problems. Currently, I’m
-              exploring Nextjs, Webflow and a bit of Python programming . While
-              I am not programming, I enjoy playing listening to music ,
-              photography and playing vollyball. Learning more to improve skill.
-            </p>
-            <p className="text-phosphorusGreen underline text-base font-Manrope pt-8 flex">
-              <Link to={""}>MORE ABOUT ME</Link>
-            </p>
-          </div>
-        </div>
-      </section>
+      <ContactMe></ContactMe>
     </Layout>
   );
 };
