@@ -1,17 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Icon } from "lucide-react";
 import { X } from "lucide-react";
 
 import { AlignJustify } from "lucide-react";
 
 const Header = () => {
-  const links = [
-    { lable: "Work", to: "" },
-    { lable: "About", to: "" },
-    { lable: "Contact", to: "" },
-  ];
   const [isMenu, setIsMenu] = useState(false);
   const clickOutSide = () => {
     if (isMenu) {

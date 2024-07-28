@@ -1,10 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
 import Layout from "./components/layout/layout";
 import Button from "./components/button/button";
 import { Linkedin } from "lucide-react";
 import { Github } from "lucide-react";
-import { MoveDownRight } from 'lucide-react';
-import { Link } from "react-router-dom";
+import { MoveDownRight } from "lucide-react";
 import ContactMe from "./components/contactMe/contactMe";
 import FeaturedProjects from "./components/featuredProjects/featuredProjects";
 
@@ -65,8 +63,6 @@ const App = () => {
           </div>
         </div>
         <div className="flex flex-col items-center fixed gap-y-6 right-12 top-1/2"></div>
-
-        {/* <Scroller steps={4}></Scroller> */}
       </section>
 
       <FeaturedProjects></FeaturedProjects>
