@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Layout from "./components/layout/layout";
 import Button from "./components/button/button";
 import { Linkedin } from "lucide-react";
 import { Github } from "lucide-react";
-import { MoveUpRight } from "lucide-react";
+import { MoveDownRight } from 'lucide-react';
 import { Link } from "react-router-dom";
 import ContactMe from "./components/contactMe/contactMe";
 import FeaturedProjects from "./components/featuredProjects/featuredProjects";
@@ -14,7 +14,9 @@ const App = () => {
       <section className="flex  flex-col gap-y-10  md:justify-center  md:flex-row w-full bg-generalBg  px-2 md:p-10">
         <div className="flex flex-col items-center justify-center px-4">
           <div className="text-[57px] sm:text-[101px] text-white font-bebasBold text-center md:text-start w-full ">
-            <h1 className="">
+            <h1
+              className={`pt-8 md:pt-2 transition-all duration-200  bg-gradient-to-r from-blue-600 via-red-500 to-Neutral-400  inline-block text-transparent bg-clip-text`}
+            >
               HI, I AM <br />
               HOSSEIN SEYEDI.
             </h1>
@@ -33,7 +35,7 @@ const App = () => {
               >
                 CONTACT ME
                 <span className="size-2 flex items-center justify-center  group-hover:size-8 transition-all duration-200 ease-out text-white rounded-full bg-black">
-                  <MoveUpRight />
+                  <MoveDownRight />
                 </span>
               </Button>
             </div>
@@ -111,6 +113,7 @@ const App = () => {
               <li> Self-learning</li>
               <li> Problem-solving</li>
               <li> package manager</li>
+              <li> fimga</li>
             </ul>
           </div>
           <div className="basis-1/3 bg-gradient-to-r capitalize from-violet-200 to-pink-200 rounded-lg p-3 flex tracking-wider flex-col  ">
@@ -120,6 +123,7 @@ const App = () => {
               <li>ssr</li>
               <li>docker</li>
               <li>react query</li>
+              <li>unit testing</li>
             </ul>
           </div>
         </div>

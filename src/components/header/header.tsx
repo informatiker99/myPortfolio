@@ -18,7 +18,6 @@ const Header = () => {
       setIsMenu(false);
     }
   };
-  console.log(isMenu);
 
   return (
     <header
