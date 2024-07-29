@@ -1,6 +1,6 @@
 import Layout from "./components/layout/layout";
 import Button from "./components/button/button";
-import { Linkedin, WindIcon } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { Github } from "lucide-react";
 import { MoveDownRight } from "lucide-react";
 import ContactMe from "./components/contactMe/contactMe";
@@ -56,7 +56,7 @@ const App = () => {
             </div>
             <div className="px-2">
               <Link
-              target="_blank"
+                target="_blank"
                 to={"https://github.com/informatiker99"}
                 className="size-14 rounded-full bg-lightDark items-center flex justify-center"
               >
