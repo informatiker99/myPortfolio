@@ -1,3 +1,4 @@
+import projectFoto from "../../../public/project1png.png"
 const FeaturedProjects = () => {
   return (
     <section
@@ -15,7 +16,7 @@ const FeaturedProjects = () => {
       </div>
       <article className=" md:flex justify-center items-center w-full p-2 ">
         <div className="bg-articleBG basis-1/2 p-4 w-full rounded-lg flex justify-center items-center">
-          <img src="./public/project1png.png" alt="pic" className="w-3/4" />
+          <img src={projectFoto} alt="pic" className="w-3/4" />
         </div>
         <div className="w-full flex flex-col items-center text-white p-4">
           <div className="font-Manrope  text-[24px] md:text-[32px] pb-4">

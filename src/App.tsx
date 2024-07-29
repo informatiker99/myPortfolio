@@ -6,6 +6,7 @@ import { MoveDownRight } from "lucide-react";
 import ContactMe from "./components/contactMe/contactMe";
 import FeaturedProjects from "./components/featuredProjects/featuredProjects";
 import { Link } from "react-router-dom";
+import mainFoto from "../public/2021-03-23 14.06.04.jpg";
 
 const App = () => {
   return (
@@ -70,7 +71,7 @@ const App = () => {
         <div className="basis-1/2 flex items-center justify-center w-full p-4 ">
           <div className="border border-normalText  flex justify-center ">
             <img
-              src="/public/2021-03-23 14.06.04.jpg"
+              src={mainFoto}
               alt=""
               className=" md:max-w-[30vw] max-w-[70vw] "
             />
