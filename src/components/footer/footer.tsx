@@ -4,8 +4,35 @@ import { Linkedin } from "lucide-react";
 import { Github } from "lucide-react";
 import { Instagram } from "lucide-react";
 import { Phone } from "lucide-react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Footer = () => {
+  const formRef = useRef<any>(null);
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+    console.log(formRef);
+    emailjs
+      .sendForm(`service_66smywc`, `template_enu7mz6`, formRef.current, {
+        publicKey: "iID4VhKM9qspSAp8M",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          alert("ایمیل شما با موفقیت ارسال شد :) ");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   return (
     <footer className="w-full flex-col md:flex items-center justify-center bg-generalBg  p-2 md:p-10 pt-8">
       <div className="flex-col md:flex-row items-center justify-center md:flex text-white w-full">
@@ -70,6 +97,8 @@ const Footer = () => {
         </div>
         <div className="basis-1/2 text-base font-Manropepx-8 px-8 pb-8">
           <form
+            ref={formRef}
+            onSubmit={sendEmail}
             action=""
             className="flex gap-y-2 flex-col items-center w-full "
           >
@@ -80,6 +109,11 @@ const Footer = () => {
 
               <input
                 type="text"
+                name="from_name"
+                onChange={(e) =>
+                  setFormState((prev) => ({ ...prev, name: e.target.value }))
+                }
+                value={formState.name}
                 className="w-full bg-articleBG rounded-md p-3 font-Manrope outline-black"
               />
             </div>
@@ -89,7 +123,12 @@ const Footer = () => {
               </label>
 
               <input
+                name="from_name"
+                onChange={(e) =>
+                  setFormState((prev) => ({ ...prev, email: e.target.value }))
+                }
                 type="text"
+                value={formState.email}
                 className="w-full bg-articleBG rounded-md p-3 font-Manrope outline-black"
               />
             </div>
@@ -99,6 +138,11 @@ const Footer = () => {
               </label>
 
               <input
+                name="subject"
+                onChange={(e) =>
+                  setFormState((prev) => ({ ...prev, subject: e.target.value }))
+                }
+                value={formState.subject}
                 type="text"
                 className="w-full bg-articleBG rounded-md p-3 font-Manrope outline-black"
               />
@@ -109,8 +153,12 @@ const Footer = () => {
               </label>
 
               <textarea
-                name=""
+                name="message"
                 id=""
+                onChange={(e) =>
+                  setFormState((prev) => ({ ...prev, message: e.target.value }))
+                }
+                value={formState.message}
                 className="w-full bg-articleBG rounded-md p-3 font-Manrope outline-black"
               ></textarea>
             </div>
