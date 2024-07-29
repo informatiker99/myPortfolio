@@ -9,6 +9,38 @@ import { Link } from "react-router-dom";
 import mainFoto from "../public/2021-03-23 14.06.04.jpg";
 
 const App = () => {
+  const skills: string[] = [
+    "Git And Gitub/Gitlab",
+    "Rest Api",
+    "Team Work",
+    "Responsive Design",
+    "Self-Learning",
+    "Problem-Solving",
+    "Package Manager",
+    "Fimga",
+  ];
+
+  const frameWorks: string[] = [
+    "React Js",
+    "Next Js",
+    "Tailwind",
+    "Bootstrap",
+    "Redux",
+  ];
+  const Languages: string[] = [
+    "Javascript /+Es6",
+    "Sass",
+    "Typescript",
+    "Css 3",
+    "Html 5",
+  ];
+  const exploring: string[] = [
+    "Ci/Cd",
+    "Ssr",
+    "Docker",
+    "React Query",
+    "Unit Testing",
+  ];
   return (
     <Layout>
       <section className="flex  flex-col gap-y-10  md:justify-center  md:flex-row w-full bg-generalBg  px-2 md:p-10">
@@ -88,53 +120,71 @@ const App = () => {
         </div>
         <div className="grid md:grid-cols-4 grid-cols-1 sm:grid-cols-2 font-Manrope font-bold   justify-center gap-2 w-full pt-10">
           <div className="basis-1/3 capitalize bg-gradient-to-r from-amber-500 to-pink-500   tracking-wider	 rounded-lg p-5 flex-col items-center  ">
-            <div className="py-2  px-2 tracking-[.2rem] ">Languages</div>
-            <ul className="pl-6 pt-2">
-              <li>javascript /+es6</li>
-              <li>sass</li>
-              <li>typescript</li>
-            </ul>
-            <div className="bg-blue-300 p-1 rounded-md m-4 ">
-              markup Languages
+            <div className="py-2  px-2 tracking-[.2rem]  rounded-lg">
+              Languages and markup
             </div>
-            <ul className="pl-6 w-full">
-              <li>css 3</li>
-              <li>html 5</li>
+            <ul className="pl-6 pt-2 ">
+              {Languages.map((item) => {
+                return (
+                  <li className="flex items-center">
+                    <span className="size-2 bg-neutral-800 rotate-45 "></span>
+                    <div key={item} className="py-2 l px-2">
+                      {item}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className="basis-1/3 bg-gradient-to-r from-teal-200 capitalize to-teal-500 rounded-lg p-5 flex tracking-wider flex-col items-center">
-            <div className="py-2  px-2 text-start w-full tracking-[.2rem]">
+            <div className="py-2  px-2 text-start w-full tracking-[.2rem]  rounded-lg">
               Frameworks & libraries
             </div>
             <ul className="w-full pl-6 pt-2 ">
-              <li>react js</li>
-              <li>next js</li>
-              <li>tailwind</li>
-              <li>bootstrap</li>
-              <li>redux</li>
+              {frameWorks.map((item) => {
+                return (
+                  <li className="flex items-center">
+                    <span className="size-2 bg-neutral-800 rotate-45 "></span>
+                    <div key={item} className="py-2 l px-2">
+                      {item}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className="basis-1/3 tracking-wider flex-col items-center bg-gradient-to-r from-amber-200 to-yellow-500 rounded-lg p-5 flex capitalize ">
-            <div className="w-full text-start tracking-[.2rem]">Skills</div>
+            <div className="w-full text-start tracking-[.2rem]  rounded-lg py-2  px-2 ">
+              Skills
+            </div>
             <ul className="w-full py-2 pl-6">
-              <li>git and gitub/gitlab</li>
-              <li>rest api</li>
-              <li> team work </li>
-              <li> Responsive design</li>
-              <li> Self-learning</li>
-              <li> Problem-solving</li>
-              <li> package manager</li>
-              <li> fimga</li>
+              {skills.map((item) => {
+                return (
+                  <li className="flex items-center">
+                    <span className="size-2 bg-neutral-800 rotate-45 "></span>
+                    <div key={item} className="py-2 l px-2">
+                      {item}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className="basis-1/3 bg-gradient-to-r capitalize from-violet-200 to-pink-200 rounded-lg p-5 flex tracking-wider flex-col  ">
-            <div className="w-full text-start tracking-[.2rem]">Exploring</div>
+            <div className="w-full text-start tracking-[.2rem]  rounded-lg py-2  px-2 ">
+              Exploring
+            </div>
             <ul className="w-full pl-6 pt-2 ">
-              <li>ci/cd</li>
-              <li>ssr</li>
-              <li>docker</li>
-              <li>react query</li>
-              <li>unit testing</li>
+              {exploring.map((item) => {
+                return (
+                  <li className="flex items-center">
+                    <span className="size-2 bg-neutral-800 rotate-45 "></span>
+                    <div key={item} className="py-2 l px-2">
+                      {item}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
