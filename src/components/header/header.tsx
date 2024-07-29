@@ -20,7 +20,7 @@ const Header = () => {
       <div className="font-bebasRegular text-2xl md:text-3xl  hover:text-normalTextHover transition-all duration-200 flex items-center">
         Hossein seyedi
       </div>
-      <ul className="flex font-Manrope">
+      <ul className="hidden  md:flex font-Manrope ">
         {/* {links.map((item) => { */}
         {/* return ( */}
         <li className=" px-4 py-3 hover:text-normalTextHover transition-all duration-200">
@@ -33,7 +33,6 @@ const Header = () => {
           <Link to={""}>
             <span
               onClick={() => {
-                console.log("y");
 
                 window.scrollTo({
                   behavior: "smooth",
@@ -47,13 +46,13 @@ const Header = () => {
         </li>
         {/* ); */}
         {/* })} */}
-        <div>
-          <AlignJustify
-            className="sm:hidden cursor-pointer "
-            onClick={() => setIsMenu(!isMenu)}
-          />
-        </div>
       </ul>
+      <div>
+        <AlignJustify
+          className="md:hidden cursor-pointer "
+          onClick={() => setIsMenu(!isMenu)}
+        />
+      </div>
 
       {isMenu && (
         <div

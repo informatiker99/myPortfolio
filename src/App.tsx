@@ -1,10 +1,11 @@
 import Layout from "./components/layout/layout";
 import Button from "./components/button/button";
-import { Linkedin } from "lucide-react";
+import { Linkedin, WindIcon } from "lucide-react";
 import { Github } from "lucide-react";
 import { MoveDownRight } from "lucide-react";
 import ContactMe from "./components/contactMe/contactMe";
 import FeaturedProjects from "./components/featuredProjects/featuredProjects";
+import { Link } from "react-router-dom";
 
 const App = () => {
   return (
@@ -29,27 +30,40 @@ const App = () => {
             <div className="px-2 ">
               <Button
                 type="button"
-                className="py-3 px-4 group   min-h-14 w-[160px] md:w-[187px]  font-bold flex items-center justify-between  bg-phosphorusGreen rounded-full "
+                onClick={() => {
+                  window.scrollTo({
+                    behavior: "smooth",
+                    top: document.body.scrollHeight,
+                  });
+                }}
+                className="p-4 group text-xs font-bold flex items-center justify-between  bg-phosphorusGreen rounded-full "
               >
                 CONTACT ME
-                <span className="size-2 flex items-center justify-center  group-hover:size-8 transition-all duration-200 ease-out text-white rounded-full bg-black">
+                <span className="size-2  flex ml-2 items-center justify-center  group-hover:size-6 p-1 transition-all duration-200 ease-out text-white rounded-full bg-black">
                   <MoveDownRight />
                 </span>
               </Button>
             </div>
             <div className="px-2">
-              <Button className="size-14 rounded-full bg-lightDark items-center flex justify-center">
+              <Link
+                to={""}
+                className="size-14 rounded-full bg-lightDark items-center flex justify-center"
+              >
                 <span className="text-phosphorusGreen">
                   <Linkedin />
                 </span>
-              </Button>
+              </Link>
             </div>
             <div className="px-2">
-              <Button className="size-14 rounded-full bg-lightDark items-center flex justify-center">
+              <Link
+              target="_blank"
+                to={"https://github.com/informatiker99"}
+                className="size-14 rounded-full bg-lightDark items-center flex justify-center"
+              >
                 <span className="text-phosphorusGreen">
                   <Github />
                 </span>
-              </Button>
+              </Link>
             </div>
           </div>
         </div>
