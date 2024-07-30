@@ -54,7 +54,7 @@ const FeaturedProjects = () => {
         </div>
         <div className="w-full flex flex-col items-center text-white p-4">
           <div className="font-Manrope  text-[24px] md:text-[32px] pb-4">
-            Promotional landing page for book ordering
+            Developed and launched a customer club website
           </div>
           <div>
             <p className="text-lg font-Manrope text-left">
