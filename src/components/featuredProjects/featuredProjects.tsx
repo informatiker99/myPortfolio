@@ -1,4 +1,6 @@
 import projectFoto from "../../../public/project1png.png"
+import alisProject from "../../../public/alis.png"
+
 const FeaturedProjects = () => {
   return (
     <section
@@ -48,7 +50,7 @@ const FeaturedProjects = () => {
       {/* this section musst change  */}
       <article className=" md:flex justify-center items-center w-full p-2 ">
         <div className="bg-articleBG basis-1/2 p-4 w-full rounded-lg flex justify-center items-center">
-          <img src="./public/project1png.png" alt="pic" className="w-3/4 " />
+          <img src={alisProject} alt="pic" className="w-3/4 " />
         </div>
         <div className="w-full flex flex-col items-center text-white p-4">
           <div className="font-Manrope  text-[24px] md:text-[32px] pb-4">
@@ -56,10 +58,7 @@ const FeaturedProjects = () => {
           </div>
           <div>
             <p className="text-lg font-Manrope text-left">
-              Teamed up with a designer to breathe life into a promotional
-              webpage for book publishers . Delivered a fully responsive design
-              with dynamic content capabilities, seamlessly integrating a
-              newsletter feature to keep book lovers with the latest adventures.
+             Developed and launched a customer club website for Alis industrial company, featuring a personalized dashboard, loyalty program integration, and exclusive content access. This initiative improved customer engagement and loyalty, driving repeat business and enhancing user experience.
             </p>
           </div>
           <div className="flex items-start w-full flex-col text-base font-Manrope divide-y divide-white text-white ">
