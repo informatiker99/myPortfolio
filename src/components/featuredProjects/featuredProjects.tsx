@@ -67,7 +67,7 @@ const FeaturedProjects = () => {
             </div>
             <div className="w-full p-4 flex justify-between">
               <div>Year</div>
-              <div>2023</div>
+              <div>2024</div>
             </div>
             <div className="w-full p-4 flex justify-between">
               <div>Role</div>
