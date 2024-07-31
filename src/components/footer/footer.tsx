@@ -70,7 +70,10 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  to={""}
+                  target="_blank"
+                  to={
+                    "https://www.linkedin.com/in/hossein-seyedi-661028233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                  }
                   className="size-12 md:size-14 rounded-full bg-lightDark items-center flex justify-center"
                 >
                   <Linkedin />
@@ -87,7 +90,7 @@ const Footer = () => {
                   className="underline text-phosphorusGreen size-12 md:size-14 rounded-full bg-lightDark items-center flex justify-center group"
                 >
                   <Phone />
-{/*                   <div className=" absolute min-w-32 -translate-y-1/2 left-14  top-1/2 grow text-center group-hover:opacity-100 transition-opacity duration-500 ease-out opacity-0 bg-lightDark rounded-full font-Manrope text-sm p-4 tracking-[.2rem]	">
+                  {/*                   <div className=" absolute min-w-32 -translate-y-1/2 left-14  top-1/2 grow text-center group-hover:opacity-100 transition-opacity duration-500 ease-out opacity-0 bg-lightDark rounded-full font-Manrope text-sm p-4 tracking-[.2rem]	">
                     <p>+98 938 493 53 87</p>
                   </div> */}
                 </Link>

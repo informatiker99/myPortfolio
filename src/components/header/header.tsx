@@ -102,7 +102,7 @@ const Header = () => {
             {/* })} */}
           </ul>
         </div>
-        <div>social network </div>
+        {/* <div>social network </div> */}
       </div>
     </header>
   );

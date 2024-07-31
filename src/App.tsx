@@ -7,7 +7,7 @@ import ContactMe from "./components/contactMe/contactMe";
 import FeaturedProjects from "./components/featuredProjects/featuredProjects";
 import { Link } from "react-router-dom";
 import mainFoto from "../public/mainFoto.jpg";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 const App = () => {
   const skills: string[] = [
     "Git And Gitub/Gitlab",
@@ -43,7 +43,7 @@ const App = () => {
   ];
   return (
     <Layout>
-      <Analytics/>
+      <Analytics />
       <section className="flex  flex-col gap-y-10  md:justify-center  md:flex-row w-full bg-generalBg  px-2 md:p-10">
         <div className="flex flex-col items-center justify-center px-4">
           <div className="text-[57px] sm:text-[101px] text-white font-bebasBold text-center md:text-start w-full ">
@@ -80,7 +80,10 @@ const App = () => {
             </div>
             <div className="px-2">
               <Link
-                to={""}
+                target="_blank"
+                to={
+                  "https://www.linkedin.com/in/hossein-seyedi-661028233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                }
                 className="size-14 rounded-full bg-lightDark items-center flex justify-center"
               >
                 <span className="text-phosphorusGreen">
@@ -102,11 +105,12 @@ const App = () => {
           </div>
         </div>
         <div className="basis-1/2 flex items-center justify-center w-full p-4 ">
-          <div className="filter flex justify-center  ">
+          <div className="filter flex justify-center  relative">
+            {/* <div className="absolute w-full h-full  bg-transparent inset-0 transition-all duration-300 bg-gradient-to-t from-neutral-500 from-.5% top-0 left-0 rounded-full opacity-0 hover:opacity-100 "></div> */}
             <img
               src={mainFoto}
               alt=""
-              className=" md:max-w-[30vw] max-w-[70vw] rounded-lg "
+              className=" md:max-w-[30vw] max-w-[70vw] rounded-full "
             />
           </div>
         </div>
