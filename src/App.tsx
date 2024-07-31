@@ -7,7 +7,7 @@ import ContactMe from "./components/contactMe/contactMe";
 import FeaturedProjects from "./components/featuredProjects/featuredProjects";
 import { Link } from "react-router-dom";
 import mainFoto from "../public/mainFoto.jpg";
-
+import { Analytics } from "@vercel/analytics/react"
 const App = () => {
   const skills: string[] = [
     "Git And Gitub/Gitlab",
@@ -43,6 +43,7 @@ const App = () => {
   ];
   return (
     <Layout>
+      <Analytics/>
       <section className="flex  flex-col gap-y-10  md:justify-center  md:flex-row w-full bg-generalBg  px-2 md:p-10">
         <div className="flex flex-col items-center justify-center px-4">
           <div className="text-[57px] sm:text-[101px] text-white font-bebasBold text-center md:text-start w-full ">
